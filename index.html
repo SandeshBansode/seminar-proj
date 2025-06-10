@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>RentHome Aurangabad</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-left">
+      <h1>RentHome Aurangabad</h1>
+    </div>
+    <div class="header-right">
+      <button id="sign-in-btn" class="btn btn-outline">Sign In</button>
+      <button id="post-property-btn" class="btn btn-primary">Post Property</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Filters</h2>
+      <div class="filter-group">
+        <label for="price-range">Price Range</label>
+        <input type="range" id="price-range" min="5000" max="50000" step="1000" value="50000" />
+        <div class="price-values">
+          <span>₹5,000</span>
+          <span id="price-range-value">₹50,000</span>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label for="property-type">Property Type</label>
+        <select id="property-type">
+          <option value="">Select BHK</option>
+          <option value="1BHK">1BHK</option>
+          <option value="2BHK">2BHK</option>
+          <option value="3BHK">3BHK</option>
+          <option value="4BHK">4BHK</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="locality">Locality</label>
+        <select id="locality">
+          <option value="">Select Area</option>
+          <option value="Cidco">Cidco</option>
+          <option value="Chikalthana">Chikalthana</option>
+          <option value="Garkheda">Garkheda</option>
+          <option value="Jalna Road">Jalna Road</option>
+          <option value="Osmanpura">Osmanpura</option>
+          <option value="Beed Bypass">Beed Bypass</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="furnishing">Furnishing</label>
+        <select id="furnishing">
+          <option value="">Select Furnishing</option>
+          <option value="Unfurnished">Unfurnished</option>
+          <option value="Semi-Furnished">Semi-Furnished</option>
+          <option value="Fully Furnished">Fully Furnished</option>
+        </select>
+      </div>
+
+      <div class="filter-group amenities-group">
+        <label>Amenities</label>
+        <div>
+          <input type="checkbox" id="amenity-parking" value="Parking" />
+          <label for="amenity-parking">Parking</label>
+        </div>
+        <div>
+          <input type="checkbox" id="amenity-wifi" value="WiFi" />
+          <label for="amenity-wifi">WiFi</label>
+        </div>
+        <div>
+          <input type="checkbox" id="amenity-power" value="Power Backup" />
+          <label for="amenity-power">Power Backup</label>
+        </div>
+        <div>
+          <input type="checkbox" id="amenity-water" value="Water Supply" />
+          <label for="amenity-water">Water Supply</label>
+        </div>
+      </div>
+
+      <button id="clear-filters" class="btn btn-outline clear-btn">Clear All Filters</button>
+    </aside>
+
+    <main class="main-content">
+      <div class="list-header">
+        <h2 id="properties-found">0 Properties Found</h2>
+        <select id="sort-price" class="sort-dropdown">
+          <option value="low-high">Price: Low to High</option>
+          <option value="high-low">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div id="property-list" class="property-list">
+        <!-- Property cards injected here -->
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
